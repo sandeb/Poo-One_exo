@@ -60,3 +60,7 @@ var_dump($residentialway);
 
 
 
+$car = new Car('yellow', 4, 'electric');
+$car->setHasParkBrake(false);
+echo $car->start();
+var_dump($car);
