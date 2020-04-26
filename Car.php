@@ -1,6 +1,6 @@
 <?php
 require_once 'Vehicle.php';
-Class Car extends Vehicle
+final class Car extends Vehicle
 {
     /**
      * @var string

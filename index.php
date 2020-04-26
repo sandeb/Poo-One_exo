@@ -2,6 +2,10 @@
 require_once 'Bicycle.php';
 require_once 'Car.php';
 require_once 'Truck.php';
+require_once 'Skateboard.php';
+require_once 'MotorWay.php';
+require_once 'PedestrianWay.php';
+require_once 'ResidentialWay.php';
 
 $bicycle = new Bicycle('blue', 1);
 var_dump($bicycle);
@@ -39,6 +43,20 @@ echo $StarTruck->getCurrentSpeed();
 echo $StarTruck->brake();
 echo $StarTruck->levelCharge();
 
+$skate = new Skateboard('red',1);
+
+
+$motorway = new MotorWay();
+$motorway->addVehicule($mustang);
+$motorway->addVehicule($truck);
+var_dump($motorway);
+$pedestrianway = new PedestrianWay();
+$pedestrianway->addVehicule($skate);
+$pedestrianway->addVehicule($bike);
+var_dump($pedestrianway);
+$residentialway = new ResidentialWay();
+$residentialway->addVehicule($StarTruck);
+var_dump($residentialway);
 
 
 
