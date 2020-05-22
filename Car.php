@@ -17,7 +17,8 @@ final class Car extends Vehicle
         'electric',
     ];
 
-    private $hasParkBrake = true ;
+    private $hasParkBrake = true;
+
 
     public function __construct(string $color, int $nbSeats, string $energy)
     {
@@ -58,22 +59,23 @@ final class Car extends Vehicle
     /**
      * @param bool $hasParkBrake
      */
-    public function setHasParkBrake($hasParkBrake)
+    public function setHasParkBrake(bool $hasParkBrake) :void
     {
         $this->hasParkBrake = $hasParkBrake;
     }
 
 
 
-    public function start(){
-        try{
-            if($this->hasParkBrake === true){
-                throw new Exception("my car is a hand brake ");
+    public function start()
+    {
+        try {
+            if($this->hasParkBrake === true) {
+                throw new Exception('Fuck! le frein ');
             }
-        }catch (Exception $e) {
-            echo $e;
-        }finally {
-            return "My car ride fast like a lot of horses";
+        } catch (Exception $e) {
+            echo "Exception received  : ". $e->getMessage();
+        } finally {
+            echo "Ma voiture roule comme un donut";
         }
     }
 
