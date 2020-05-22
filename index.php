@@ -6,6 +6,7 @@ require_once 'Skateboard.php';
 require_once 'MotorWay.php';
 require_once 'PedestrianWay.php';
 require_once 'ResidentialWay.php';
+require_once 'Speedometre.php';
 
 $bike = new Bicycle('black',2); 
 $bike->setCurrentSpeed(15);
@@ -53,5 +54,8 @@ $residentialway->addVehicule($StarTruck);
 
 $car = new Car('yellow', 4, 'electric');
 $car->setHasParkBrake(false);
-echo $car->start();
+echo $car->start().'<br>';
 
+echo Speedometre::convertKmOnMiles(10).'<br>';
+
+echo Speedometre::convertMilesOnKm( 250).'<br>';
