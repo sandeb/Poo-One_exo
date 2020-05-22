@@ -51,9 +51,6 @@ $pedestrianway->addVehicule($bike);
 $residentialway = new ResidentialWay();
 $residentialway->addVehicule($StarTruck);
 
-
-
-
 $car = new Car('yellow', 4, 'electric');
 $car->setHasParkBrake(false);
 echo $car->start();
